@@ -1,0 +1,131 @@
+/* Podstawowy styl */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+}
+header {
+  background: #004080;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  align-items: center;
+}
+.logo img {
+  height: 50px;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+nav ul li {
+  margin-left: 20px;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+.slider {
+  height: 300px;
+  overflow: hidden;
+}
+.slides {
+  display: flex;
+  width: 300%;
+  animation: slide 15s infinite;
+}
+.slide {
+  width: 100%;
+  flex-shrink: 0;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.slide-content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 20px;
+  max-width: 300px;
+}
+@keyframes slide {
+  0% { transform: translateX(0%); }
+  33% { transform: translateX(-100%); }
+  66% { transform: translateX(-200%); }
+  100% { transform: translateX(0%); }
+}
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 30px 10px;
+}
+.category {
+  background: white;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 250px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+.category img {
+  width: 80px;
+}
+#kontakt {
+  max-width: 700px;
+  margin: 50px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+#kontakt form input, #kontakt form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+#kontakt form button {
+  padding: 10px 20px;
+  background: #004080;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+footer {
+  background: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+}
+/* Mobilne menu */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #003366;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    z-index: 1000;
+  }
+  nav ul.show {
+    display: flex;
+  }
+  nav ul li {
+    margin: 10px 0;
+  }
+}

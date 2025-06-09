@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ASSystem - Hurtownia Elektryczna</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <a href="#" class="logo">
+      <img src="https://via.placeholder.com/180x50?text=ASSystem+Logo" alt="ASSystem Logo" />
+    </a>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav>
+      <ul id="nav-menu">
+        <li><a href="#">Strona główna</a></li>
+        <li><a href="#">Oferta</a></li>
+        <li><a href="#">Promocje</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+        <li><a href="#">O nas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="slider">
+    <div class="slides">
+      <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1581091012184-26d56f0d68a5?auto=format&fit=crop&w=800&q=80');">
+        <div class="slide-content">
+          <h2>Najlepsze artykuły elektryczne</h2>
+          <p>Profesjonalne rozwiązania dla Twojej firmy.</p>
+        </div>
+      </div>
+      <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1605902711622-cfb43c443f5e?auto=format&fit=crop&w=800&q=80');">
+        <div class="slide-content">
+          <h2>Akcesoria elektryczne</h2>
+          <p>Wysoka jakość, atrakcyjne ceny.</p>
+        </div>
+      </div>
+      <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&w=800&q=80');">
+        <div class="slide-content">
+          <h2>Nowości w ofercie</h2>
+          <p>Śledź nasze promocje i nowości.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="categories">
+    <div class="category">
+      <img src="https://cdn-icons-png.flaticon.com/512/2809/2809879.png" alt="Kable i przewody" />
+      <h3>Kable i przewody</h3>
+      <p>Duży wybór przewodów o różnych przekrojach.</p>
+    </div>
+    <div class="category">
+      <img src="https://cdn-icons-png.flaticon.com/512/1087/1087961.png" alt="Osprzęt elektryczny" />
+      <h3>Osprzęt elektryczny</h3>
+      <p>Gniazda, wyłączniki, puszki i więcej.</p>
+    </div>
+    <div class="category">
+      <img src="https://cdn-icons-png.flaticon.com/512/2232/2232688.png" alt="Oświetlenie" />
+      <h3>Oświetlenie</h3>
+      <p>Lampy LED, świetlówki i żarówki.</p>
+    </div>
+    <div class="category">
+      <img src="https://cdn-icons-png.flaticon.com/512/1076/1076928.png" alt="Narzędzia" />
+      <h3>Narzędzia</h3>
+      <p>Profesjonalne narzędzia do instalacji.</p>
+    </div>
+  </section>
+
+  <section id="kontakt">
+    <h2>Kontakt</h2>
+    <p><strong>Adres:</strong> ul. Przykładowa 12, 00-123 Warszawa</p>
+    <p><strong>Telefon:</strong> +48 123 456 789</p>
+    <p><strong>Email:</strong> kontakt@assystem.pl</p>
+    <form onsubmit="alert('Dziękujemy za wiadomość!'); return false;">
+      <label for="name">Imię i nazwisko</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Wiadomość</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Wyślij</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 ASSystem - Hurtownia Elektryczna. Wszelkie prawa zastrzeżone.</p>
+    <p>
+      <a href="#">Polityka prywatności</a> |
+      <a href="#">Regulamin</a> |
+      <a href="#kontakt">Kontakt</a>
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
